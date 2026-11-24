@@ -3,9 +3,15 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import type { Band, Reading } from '@/lib/fixtures'
 import { deltaLabel, formatUtc } from '@/lib/format'
-import { BandIcon, BandMark, DecimalValue, Provenance, SectionHead, Todo } from './primitives'
+import { BandIcon, BandMark, DecimalValue, Provenance, SectionHead } from './primitives'
 
 const BAND_ORDER: Band[] = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']
+const BAND_COPY: Record<Band, string> = {
+  LOW: 'Deep, balanced liquidity on both sides. Large trades barely move the price.',
+  MEDIUM: 'Liquidity covers everyday size, but bigger trades start to move the price.',
+  HIGH: 'Thin liquidity. A large sale or a deliberate push could move the price a long way.',
+  CRITICAL: 'Too thin or too broken to trust as collateral, including when there is no price at all.',
+}
 const bandVar: Record<Band, string> = {
   LOW: 'var(--color-band-low)',
   MEDIUM: 'var(--color-band-medium)',
@@ -87,7 +93,7 @@ export function Bands({ reading, history }: { reading: Reading; history: { runs:
             {BAND_ORDER.map((band) => (
               <li key={band} className="flex flex-wrap items-center gap-x-5 gap-y-2 py-4">
                 <span className="w-28"><BandMark band={band} /></span>
-                <Todo>Al writes one sentence for {band}</Todo>
+                <span className="min-w-0 flex-1 text-[15px] text-soft">{BAND_COPY[band]}</span>
               </li>
             ))}
           </ul>
