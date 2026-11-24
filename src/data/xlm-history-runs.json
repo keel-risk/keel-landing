@@ -1,0 +1,17 @@
+{
+  "capturedFrom": "https://api.keels.app/v1/asset/XLM/history",
+  "note": "Consecutive points with the same band, grouped at capture. n is the number of readings in the run.",
+  "methodologyVersion": "1.0.8-draft",
+  "dataSource": "horizon",
+  "from": 65212758,
+  "to": 65650238,
+  "points": 2000,
+  "runs": [
+    { "band": "LOW", "from": 65212758, "fromAt": "2026-10-30T08:39:34Z", "to": 65580220, "toAt": "2026-11-20T15:05:44Z", "n": 1611 },
+    { "band": "MEDIUM", "from": 65580400, "fromAt": "2026-11-20T15:20:44Z", "to": 65580400, "toAt": "2026-11-20T15:20:44Z", "n": 1 },
+    { "band": "LOW", "from": 65580580, "fromAt": "2026-11-20T15:35:44Z", "to": 65631160, "toAt": "2026-11-23T13:50:46Z", "n": 282 },
+    { "band": "MEDIUM", "from": 65631339, "fromAt": "2026-11-23T14:05:41Z", "to": 65631339, "toAt": "2026-11-23T14:05:41Z", "n": 1 },
+    { "band": "LOW", "from": 65631520, "fromAt": "2026-11-23T14:20:46Z", "to": 65650058, "toAt": "2026-11-24T16:05:43Z", "n": 104 },
+    { "band": "MEDIUM", "from": 65650238, "fromAt": "2026-11-24T16:20:43Z", "to": 65650238, "toAt": "2026-11-24T16:20:43Z", "n": 1 }
+  ]
+}

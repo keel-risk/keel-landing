@@ -1,0 +1,45 @@
+{
+  "capturedFrom": "https://api.keels.app/v1/asset/XLM/depth",
+  "headers": { "stalenessSeconds": 7, "methodologyVersion": "1.0.8-draft" },
+  "body": {
+    "asset": { "code": "XLM", "type": "native", "issuer": null },
+    "quote": { "code": "USDC", "type": "credit_alphanum4", "issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN" },
+    "ledgerSeq": 65650238,
+    "ledgerClosedAt": "2026-11-24T16:20:43Z",
+    "computedAt": "2026-11-24T16:20:50.053162Z",
+    "methodologyVersion": "1.0.8-draft",
+    "dataSource": "horizon",
+    "midPrice": "0.12331697662044675",
+    "priceSource": "book",
+    "poolSpotPrice": "0.1235266903165165",
+    "priceDivergencePct": "0.16977197035911324219753426",
+    "spreadPct": "0.10148906040626103506123651",
+    "depth": [
+      { "delta": 0.02, "buySide": "16670.8934100544573580793995455637", "sellSide": "99253.895581735161205383641087653544678890785068441627", "fromSdex": "2738.85774325574064802151274", "fromAmm": "13932.0356667987167100578868055637" },
+      { "delta": 0.05, "buySide": "44489.1787518445931150096216300618", "sellSide": "170270.340322453496902066489415798172352393098828465515", "fromSdex": "7984.6593785844337030205138", "fromAmm": "36504.5193732601594119891078300618" },
+      { "delta": 0.1, "buySide": "87413.122532149927094777165878995", "sellSide": "226344.202000517716621836711904118640046741960092916473", "fromSdex": "13992.82705123618199461952815", "fromAmm": "73420.295480913745100157637728995" }
+    ],
+    "manipulationCostCombined": [
+      { "delta": 0.5, "targetPrice": "0.184975464930670125", "cost": "493554.4961452683339905789023830992", "reachable": true },
+      { "delta": 1, "targetPrice": "0.2466339532408935", "cost": "783612.1403492704889996041992184324", "reachable": true },
+      { "delta": 10, "targetPrice": "1.35648674282491425", "cost": "3696013.7420980900360671262995079096", "reachable": true },
+      { "delta": 100, "targetPrice": "12.45501463866512175", "cost": "14003948.3337669240870811756219324588", "reachable": true }
+    ],
+    "manipulationCostOrderbookOnly": [
+      { "delta": 0.5, "targetPrice": "0.184975464930670125", "cost": "150793.71933273466981325915355", "reachable": false },
+      { "delta": 1, "targetPrice": "0.2466339532408935", "cost": "150793.71933273466981325915355", "reachable": false },
+      { "delta": 10, "targetPrice": "1.35648674282491425", "cost": "150793.71933273466981325915355", "reachable": false },
+      { "delta": 100, "targetPrice": "12.45501463866512175", "cost": "150793.71933273466981325915355", "reachable": false }
+    ],
+    "maxReachablePrice": null,
+    "costToMaxReachablePrice": null,
+    "oracleResistance": null,
+    "maxSafeCollateral": "113172.1010002588583109183559520593200233709800464582365",
+    "maxSafeCollateralLiquidation": "113172.1010002588583109183559520593200233709800464582365",
+    "maxSafeCollateralManipulation": null,
+    "flags": ["THIN_DEPTH_5PCT"],
+    "unevaluatedFlags": ["MANIPULATION_RATIO_LOW", "NO_GENUINE_TRADE_30D", "HOLDER_CONCENTRATION_EXTREME", "NO_GENUINE_TRADE_7D", "HOLDER_CONCENTRATION_HIGH", "WASH_TRADE_SUSPECTED"],
+    "band": "MEDIUM",
+    "bandConfidence": "partial"
+  }
+}

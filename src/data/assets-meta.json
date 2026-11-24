@@ -1,0 +1,6 @@
+{
+  "capturedFrom": "https://api.keels.app/v1/assets",
+  "total": 85,
+  "methodologyVersion": "1.0.8-draft",
+  "bandsSeen": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+}

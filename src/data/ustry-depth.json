@@ -1,0 +1,31 @@
+{
+  "capturedFrom": "https://api.keels.app/v1/asset/USTRY:GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC/depth",
+  "headers": { "stalenessSeconds": 5, "methodologyVersion": "1.0.8-draft" },
+  "body": {
+    "asset": { "code": "USTRY", "type": "credit_alphanum12", "issuer": "GCRYUGD5NVARGXT56XEZI5CIFCQETYHAPQQTHO2O3IQZTHDH4LATMYWC" },
+    "quote": { "code": "USDC", "type": "credit_alphanum4", "issuer": "GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN" },
+    "ledgerSeq": 65650237,
+    "ledgerClosedAt": "2026-11-24T16:20:38Z",
+    "computedAt": "2026-11-24T16:20:43.507482Z",
+    "methodologyVersion": "1.0.8-draft",
+    "dataSource": "horizon",
+    "midPrice": "1.08143945767866115",
+    "priceSource": "book",
+    "depth": [
+      { "delta": 0.02, "buySide": "256848.1345522374300031802812699482", "sellSide": "274910.413323247418990310677166419824486874177875976492", "fromSdex": "256847.95835834931424852034144", "fromAmm": "0.1761938881157546599398299482" },
+      { "delta": 0.05, "buySide": "257041.3836072188540241663410698264", "sellSide": "275013.083495180761752261811170462317192622668545984664", "fromSdex": "257040.96256829034333852034144", "fromAmm": "0.4210389285106856459996298264" },
+      { "delta": 0.1, "buySide": "257041.7840347841069046273497168574", "sellSide": "275013.512594621029316363899356670136155621930555257716", "fromSdex": "257040.96256829034333852034144", "fromAmm": "0.8214664937635661070082768574" }
+    ],
+    "manipulationCostCombined": [
+      { "delta": 0.5, "targetPrice": "1.622159186517991725", "cost": "257044.7055866119526456121140391721", "reachable": true },
+      { "delta": 1, "targetPrice": "2.1628789153573223", "cost": "257047.8518587074623643929994162355", "reachable": true },
+      { "delta": 10, "targetPrice": "11.89583403446527265", "cost": "257079.4428478560037835215776272076", "reachable": true },
+      { "delta": 100, "targetPrice": "109.22538522554477615", "cost": "257315.96875183254317718445575814", "reachable": true }
+    ],
+    "maxSafeCollateral": "64260.24064207258583463008536",
+    "maxSafeCollateralLiquidation": "137506.756297310514658181949678335068077810965277628858",
+    "maxSafeCollateralManipulation": "64260.24064207258583463008536",
+    "band": "HIGH",
+    "bandConfidence": "partial"
+  }
+}

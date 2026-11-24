@@ -1,0 +1,108 @@
+/*
+  VOICE   Calm instrument, read like a ship's gauge: few words, exact figures.
+  IDEA    The waterline. A price floats on the surface; what carries it sits below.
+  PICTURE One iridescent price sphere over a stack of liquidity plates (Three.js),
+          then one sticky stage where the same dot travels through the story (GSAP).
+  COLOUR  Aura-style near-black ground, hairline grid. Story graphics use a cool
+          gradient (cyan, blue, violet, magenta) that never borrows a band colour.
+  TYPE    Geist Variable 500 with tight tracking for display, Geist Mono for provenance.
+  LAYOUT  Framed 1200px column with visible rails, sections split by full-width hairlines.
+*/
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Prototype tokens. Placeholder until lib/keel/design/tokens.ts is read. */
+@theme {
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+
+  --color-ground: #0a0a0c;
+  --color-raised: #111114;
+  --color-sunk: #070709;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-line-strong: rgb(255 255 255 / 0.16);
+  --color-ink: #f4f4f5;
+  --color-soft: #b4b4bc;
+  --color-faint: #74747e;
+
+  /* Story palette: kept away from every band hue. */
+  --color-story-1: #6ee7ff;
+  --color-story-2: #5b8cff;
+  --color-story-3: #8b6bff;
+  --color-story-4: #f06bd8;
+
+  /* Band tokens: placeholder values, one colour + one icon + one word per band. */
+  --color-band-low: #3ccf8e;
+  --color-band-medium: #e8c547;
+  --color-band-high: #f08a3c;
+  --color-band-critical: #f0485e;
+
+  /* shadcn semantic aliases */
+  --color-background: var(--color-ground);
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-ink);
+  --color-primary-foreground: #0a0a0c;
+  --color-secondary: #1a1a1f;
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted: #16161a;
+  --color-muted-foreground: var(--color-soft);
+  --color-border: var(--color-line);
+  --color-ring: var(--color-story-2);
+
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+
+:root {
+  color-scheme: dark;
+  --hatch: repeating-linear-gradient(135deg, rgb(255 255 255 / 0.14) 0 2px, transparent 2px 7px);
+  --story-gradient: linear-gradient(120deg, var(--color-story-1), var(--color-story-2) 38%, var(--color-story-3) 68%, var(--color-story-4));
+}
+
+* { min-width: 0; }
+html { scroll-padding-top: 80px; background: var(--color-ground); }
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "tnum";
+}
+
+.display {
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.title {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+/* Aura-style framing: rails on the column, hairlines between sections. */
+.frame { max-width: 1200px; margin-inline: auto; border-inline: 1px solid var(--color-line); }
+.rule { border-top: 1px solid var(--color-line); }
+
+.hatch { background-image: var(--hatch); }
+
+:focus-visible { outline: 2px solid var(--color-story-2); outline-offset: 3px; border-radius: 6px; }
+
+.st-svg text { font-size: 13px; }
+@media (max-width: 640px) { .st-svg text { font-size: 23px; } }
+
+.split-char { display: inline-block; will-change: transform, opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
